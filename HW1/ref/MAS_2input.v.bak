@@ -1,0 +1,36 @@
+// 
+// Designer: <N26112291> 
+//
+
+
+module MAS_2input(
+  input signed [4:0] Din1,
+  input signed [4:0] Din2,
+  input [1:0] Sel,
+  input signed[4:0] Q,
+  output [1:0] Tcmp,
+  output signed [4:0] TDout,
+  output signed [3:0] Dout
+);
+
+  // Intermediate signed result before modulo reduction
+  wire signed [8:0] temp;
+
+  // Logic for operation selection based on Sel
+  wire add = Sel[1] == 0;  // Addition when Sel is 00
+  wire sub = Sel[1] == 1;  // Subtraction when Sel is 11
+
+  // Perform signed addition or subtraction based on Sel
+  assign temp = (add ? Din1 + Din2 : Din1 - Din2);
+
+  // Calculate positive modulo remainder
+  assign TDout = temp % Q;  // Truncation for modulo reduction
+
+  // Sign extension for Dout (assuming Dout must be signed)
+  assign Dout = (TDout[4] ? {4'b1111, TDout[3:0]} : TDout[3:0]);
+
+  // Comparison for Tcmp (assuming positive output is greater than 0)
+  assign Tcmp[0] = TDout[4];  // Check sign of TDout
+  assign Tcmp[1] = TDout[3:0] > 4'b0000;  // Check if positive value is greater than 0
+
+endmodule

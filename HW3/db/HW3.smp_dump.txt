@@ -1,0 +1,10 @@
+
+State Machine - |MM|currentstate
+Name currentstate.s6 currentstate.s5 currentstate.s4 currentstate.s3 currentstate.s2 currentstate.s1 currentstate.s0 
+currentstate.s0 0 0 0 0 0 0 0 
+currentstate.s1 0 0 0 0 0 1 1 
+currentstate.s2 0 0 0 0 1 0 1 
+currentstate.s3 0 0 0 1 0 0 1 
+currentstate.s4 0 0 1 0 0 0 1 
+currentstate.s5 0 1 0 0 0 0 1 
+currentstate.s6 1 0 0 0 0 0 1 

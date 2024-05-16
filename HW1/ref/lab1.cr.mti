@@ -1,0 +1,15 @@
+D:/DIC/HW1/ref/tb.v {1 {vlog -work work -stats=none D:/DIC/HW1/ref/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} D:/DIC/HW1/ref/MAS_2input.v {1 {vlog -work work -stats=none D:/DIC/HW1/ref/MAS_2input.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MAS_2input
+
+Top level modules:
+	MAS_2input
+
+} {} {}}

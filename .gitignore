@@ -1,0 +1,29 @@
+# 檔案名稱 .gitignore
+
+# 忽略 secret.yml 檔案
+# secret.yml
+
+# 忽略 config 目錄下的 database.yml 檔案
+# config/database.yml
+
+# 忽略所有 db 目錄下附檔名是 .sqlite3 的檔案
+# /db/*.sqlite3
+
+# 忽略所有附檔名是 .tmp 的檔案
+# *.tmp
+
+# 當然你要忽略自己也可以，只是通常不會這麼做
+# .gitignore
+
+CHAPTER-1.pdf
+CHAPTER-2.pdf
+CHAPTER-3.pdf
+CHAPTER-4.pdf
+CHAPTER-5.pdf
+CHAPTER-6.pdf
+CHAPTER-7.pdf
+CHAPTER-8.pdf
+CHAPTER-9.pdf
+CHAPTER-10.pdf
+cyclone-20.1.1.720.qdz
+QuartusLiteSetup-20.1.1.720-windows.exe

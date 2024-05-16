@@ -1,0 +1,16 @@
+D:/DIC/HW3/testfixture.v {1 {vlog -work work -stats=none D:/DIC/HW3/testfixture.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testfixture1
+
+Top level modules:
+	testfixture1
+
+} {} {}} D:/DIC/HW3/HW3.vo {1 {vlog -work work -stats=none D:/DIC/HW3/HW3.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MM
+-- Compiling module hard_block
+
+Top level modules:
+	MM
+
+} {} {}}
