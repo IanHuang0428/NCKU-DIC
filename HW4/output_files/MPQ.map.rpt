@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MPQ
-Thu May 23 23:09:12 2024
+Sun May 26 18:00:37 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 23 23:09:12 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 26 18:00:37 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MPQ                                         ;
 ; Top-level Entity Name              ; MPQ                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,318                                       ;
-;     Total combinational functions  ; 2,318                                       ;
-;     Dedicated logic registers      ; 7                                           ;
-; Total registers                    ; 7                                           ;
+; Total logic elements               ; 2,286                                       ;
+;     Total combinational functions  ; 2,286                                       ;
+;     Dedicated logic registers      ; 8                                           ;
+; Total registers                    ; 8                                           ;
 ; Total pins                         ; 50                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -189,20 +189,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,318     ;
+; Estimated Total logic elements              ; 2,286     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2318      ;
+; Total combinational functions               ; 2286      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1582      ;
-;     -- 3 input functions                    ; 648       ;
-;     -- <=2 input functions                  ; 88        ;
+;     -- 4 input functions                    ; 1612      ;
+;     -- 3 input functions                    ; 574       ;
+;     -- <=2 input functions                  ; 100       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2274      ;
+;     -- normal mode                          ; 2242      ;
 ;     -- arithmetic mode                      ; 44        ;
 ;                                             ;           ;
-; Total registers                             ; 7         ;
-;     -- Dedicated logic registers            ; 7         ;
+; Total registers                             ; 8         ;
+;     -- Dedicated logic registers            ; 8         ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 50        ;
@@ -210,9 +210,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 190       ;
-; Total fan-out                               ; 8528      ;
-; Average fan-out                             ; 3.52      ;
+; Maximum fan-out                             ; 184       ;
+; Total fan-out                               ; 8453      ;
+; Average fan-out                             ; 3.53      ;
 +---------------------------------------------+-----------+
 
 
@@ -221,7 +221,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |MPQ                       ; 2318 (2318)         ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |MPQ                ; MPQ         ; work         ;
+; |MPQ                       ; 2286 (2286)         ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |MPQ                ; MPQ         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -230,10 +230,10 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |MPQ|CurrentState                                                                                                                               ;
 +-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name            ; CurrentState.s7 ; CurrentState.s6 ; CurrentState.s5 ; CurrentState.s4 ; CurrentState.s3 ; CurrentState.s2 ; CurrentState.s1 ; CurrentState.s0 ;
+; Name            ; CurrentState.s7 ; CurrentState.s6 ; CurrentState.s5 ; CurrentState.s4 ; CurrentState.s3 ; CurrentState.s2 ; CurrentState.s0 ; CurrentState.s1 ;
 +-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; CurrentState.s0 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; CurrentState.s1 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
+; CurrentState.s1 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; CurrentState.s0 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
 ; CurrentState.s2 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
 ; CurrentState.s3 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
 ; CurrentState.s4 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
@@ -248,7 +248,7 @@ Encoding Type:  One-Hot
 +------------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
 +------------------------------------------------------+---------------------+------------------------+
-; busy$latch                                           ; Selector163         ; yes                    ;
+; busy$latch                                           ; Selector169         ; yes                    ;
 ; RAM_valid$latch                                      ; CurrentState.s7     ; yes                    ;
 ; RAM_A[0]$latch                                       ; RAM_A[7]            ; yes                    ;
 ; RAM_A[1]$latch                                       ; RAM_A[7]            ; yes                    ;
@@ -263,107 +263,106 @@ Encoding Type:  One-Hot
 ; RAM_D[6]$latch                                       ; RAM_A[7]            ; yes                    ;
 ; RAM_D[7]$latch                                       ; RAM_A[7]            ; yes                    ;
 ; done$latch                                           ; done                ; yes                    ;
-; ind[3]                                               ; Selector165         ; yes                    ;
-; write_temp[3]                                        ; Selector153         ; yes                    ;
-; ind[2]                                               ; Selector165         ; yes                    ;
-; write_temp[2]                                        ; Selector153         ; yes                    ;
-; ind[1]                                               ; Selector165         ; yes                    ;
-; write_temp[1]                                        ; Selector153         ; yes                    ;
-; ind[0]                                               ; Selector165         ; yes                    ;
-; write_temp[0]                                        ; Selector153         ; yes                    ;
-; queue[8][0]                                          ; Selector139         ; yes                    ;
-; queue[11][0]                                         ; Selector142         ; yes                    ;
-; queue[9][0]                                          ; Selector140         ; yes                    ;
-; queue[10][0]                                         ; Selector141         ; yes                    ;
-; queue[7][0]                                          ; Selector138         ; yes                    ;
-; queue[4][0]                                          ; Selector135         ; yes                    ;
-; queue[5][0]                                          ; Selector136         ; yes                    ;
-; queue[6][0]                                          ; Selector137         ; yes                    ;
-; queue[3][0]                                          ; Selector134         ; yes                    ;
-; queue[0][0]                                          ; Selector6           ; yes                    ;
-; queue[1][0]                                          ; Selector5           ; yes                    ;
-; queue[2][0]                                          ; Selector133         ; yes                    ;
-; queue[12][0]                                         ; Selector143         ; yes                    ;
-; queue[11][1]                                         ; Selector142         ; yes                    ;
-; queue[8][1]                                          ; Selector139         ; yes                    ;
-; queue[9][1]                                          ; Selector140         ; yes                    ;
-; queue[10][1]                                         ; Selector141         ; yes                    ;
-; queue[4][1]                                          ; Selector135         ; yes                    ;
-; queue[7][1]                                          ; Selector138         ; yes                    ;
-; queue[5][1]                                          ; Selector136         ; yes                    ;
-; queue[6][1]                                          ; Selector137         ; yes                    ;
-; queue[3][1]                                          ; Selector134         ; yes                    ;
-; queue[0][1]                                          ; Selector6           ; yes                    ;
-; queue[1][1]                                          ; Selector5           ; yes                    ;
-; queue[2][1]                                          ; Selector133         ; yes                    ;
-; queue[12][1]                                         ; Selector143         ; yes                    ;
-; queue[7][2]                                          ; Selector138         ; yes                    ;
-; queue[4][2]                                          ; Selector135         ; yes                    ;
-; queue[5][2]                                          ; Selector136         ; yes                    ;
-; queue[6][2]                                          ; Selector137         ; yes                    ;
-; queue[8][2]                                          ; Selector139         ; yes                    ;
-; queue[11][2]                                         ; Selector142         ; yes                    ;
-; queue[9][2]                                          ; Selector140         ; yes                    ;
-; queue[10][2]                                         ; Selector141         ; yes                    ;
-; queue[0][2]                                          ; Selector6           ; yes                    ;
-; queue[3][2]                                          ; Selector134         ; yes                    ;
-; queue[1][2]                                          ; Selector5           ; yes                    ;
-; queue[2][2]                                          ; Selector133         ; yes                    ;
-; queue[12][2]                                         ; Selector143         ; yes                    ;
-; queue[11][3]                                         ; Selector142         ; yes                    ;
-; queue[8][3]                                          ; Selector139         ; yes                    ;
-; queue[9][3]                                          ; Selector140         ; yes                    ;
-; queue[10][3]                                         ; Selector141         ; yes                    ;
-; queue[4][3]                                          ; Selector135         ; yes                    ;
-; queue[7][3]                                          ; Selector138         ; yes                    ;
-; queue[5][3]                                          ; Selector136         ; yes                    ;
-; queue[6][3]                                          ; Selector137         ; yes                    ;
-; queue[3][3]                                          ; Selector134         ; yes                    ;
-; queue[0][3]                                          ; Selector6           ; yes                    ;
-; queue[1][3]                                          ; Selector5           ; yes                    ;
-; queue[2][3]                                          ; Selector133         ; yes                    ;
-; queue[12][3]                                         ; Selector143         ; yes                    ;
-; queue[7][4]                                          ; Selector138         ; yes                    ;
-; queue[4][4]                                          ; Selector135         ; yes                    ;
-; queue[5][4]                                          ; Selector136         ; yes                    ;
-; queue[6][4]                                          ; Selector137         ; yes                    ;
-; queue[8][4]                                          ; Selector139         ; yes                    ;
-; queue[11][4]                                         ; Selector142         ; yes                    ;
-; queue[9][4]                                          ; Selector140         ; yes                    ;
-; queue[10][4]                                         ; Selector141         ; yes                    ;
-; queue[0][4]                                          ; Selector6           ; yes                    ;
-; queue[3][4]                                          ; Selector134         ; yes                    ;
-; queue[1][4]                                          ; Selector5           ; yes                    ;
-; queue[2][4]                                          ; Selector133         ; yes                    ;
-; queue[12][4]                                         ; Selector143         ; yes                    ;
-; queue[11][5]                                         ; Selector142         ; yes                    ;
-; queue[8][5]                                          ; Selector139         ; yes                    ;
-; queue[9][5]                                          ; Selector140         ; yes                    ;
-; queue[10][5]                                         ; Selector141         ; yes                    ;
-; queue[4][5]                                          ; Selector135         ; yes                    ;
-; queue[7][5]                                          ; Selector138         ; yes                    ;
-; queue[5][5]                                          ; Selector136         ; yes                    ;
-; queue[6][5]                                          ; Selector137         ; yes                    ;
-; queue[3][5]                                          ; Selector134         ; yes                    ;
-; queue[0][5]                                          ; Selector6           ; yes                    ;
-; queue[1][5]                                          ; Selector5           ; yes                    ;
-; queue[2][5]                                          ; Selector133         ; yes                    ;
-; Number of user-specified and inferred latches = 165  ;                     ;                        ;
+; ind[3]                                               ; Selector170         ; yes                    ;
+; write_temp[3]                                        ; Selector160         ; yes                    ;
+; ind[2]                                               ; Selector170         ; yes                    ;
+; write_temp[2]                                        ; Selector160         ; yes                    ;
+; ind[1]                                               ; Selector170         ; yes                    ;
+; write_temp[1]                                        ; Selector160         ; yes                    ;
+; ind[0]                                               ; Selector170         ; yes                    ;
+; write_temp[0]                                        ; Selector160         ; yes                    ;
+; queue[8][0]                                          ; Selector148         ; yes                    ;
+; queue[11][0]                                         ; Selector151         ; yes                    ;
+; queue[9][0]                                          ; Selector149         ; yes                    ;
+; queue[10][0]                                         ; Selector150         ; yes                    ;
+; queue[7][0]                                          ; Selector147         ; yes                    ;
+; queue[4][0]                                          ; Selector144         ; yes                    ;
+; queue[5][0]                                          ; Selector145         ; yes                    ;
+; queue[6][0]                                          ; Selector146         ; yes                    ;
+; queue[3][0]                                          ; Selector143         ; yes                    ;
+; queue[0][0]                                          ; Selector5           ; yes                    ;
+; queue[1][0]                                          ; Selector141         ; yes                    ;
+; queue[2][0]                                          ; Selector142         ; yes                    ;
+; queue[12][0]                                         ; Selector152         ; yes                    ;
+; queue[11][1]                                         ; Selector151         ; yes                    ;
+; queue[8][1]                                          ; Selector148         ; yes                    ;
+; queue[9][1]                                          ; Selector149         ; yes                    ;
+; queue[10][1]                                         ; Selector150         ; yes                    ;
+; queue[4][1]                                          ; Selector144         ; yes                    ;
+; queue[7][1]                                          ; Selector147         ; yes                    ;
+; queue[5][1]                                          ; Selector145         ; yes                    ;
+; queue[6][1]                                          ; Selector146         ; yes                    ;
+; queue[3][1]                                          ; Selector143         ; yes                    ;
+; queue[0][1]                                          ; Selector5           ; yes                    ;
+; queue[1][1]                                          ; Selector141         ; yes                    ;
+; queue[2][1]                                          ; Selector142         ; yes                    ;
+; queue[12][1]                                         ; Selector152         ; yes                    ;
+; queue[7][2]                                          ; Selector147         ; yes                    ;
+; queue[4][2]                                          ; Selector144         ; yes                    ;
+; queue[5][2]                                          ; Selector145         ; yes                    ;
+; queue[6][2]                                          ; Selector146         ; yes                    ;
+; queue[8][2]                                          ; Selector148         ; yes                    ;
+; queue[11][2]                                         ; Selector151         ; yes                    ;
+; queue[9][2]                                          ; Selector149         ; yes                    ;
+; queue[10][2]                                         ; Selector150         ; yes                    ;
+; queue[0][2]                                          ; Selector5           ; yes                    ;
+; queue[3][2]                                          ; Selector143         ; yes                    ;
+; queue[1][2]                                          ; Selector141         ; yes                    ;
+; queue[2][2]                                          ; Selector142         ; yes                    ;
+; queue[12][2]                                         ; Selector152         ; yes                    ;
+; queue[11][3]                                         ; Selector151         ; yes                    ;
+; queue[8][3]                                          ; Selector148         ; yes                    ;
+; queue[9][3]                                          ; Selector149         ; yes                    ;
+; queue[10][3]                                         ; Selector150         ; yes                    ;
+; queue[4][3]                                          ; Selector144         ; yes                    ;
+; queue[7][3]                                          ; Selector147         ; yes                    ;
+; queue[5][3]                                          ; Selector145         ; yes                    ;
+; queue[6][3]                                          ; Selector146         ; yes                    ;
+; queue[3][3]                                          ; Selector143         ; yes                    ;
+; queue[0][3]                                          ; Selector5           ; yes                    ;
+; queue[1][3]                                          ; Selector141         ; yes                    ;
+; queue[2][3]                                          ; Selector142         ; yes                    ;
+; queue[12][3]                                         ; Selector152         ; yes                    ;
+; queue[7][4]                                          ; Selector147         ; yes                    ;
+; queue[4][4]                                          ; Selector144         ; yes                    ;
+; queue[5][4]                                          ; Selector145         ; yes                    ;
+; queue[6][4]                                          ; Selector146         ; yes                    ;
+; queue[8][4]                                          ; Selector148         ; yes                    ;
+; queue[11][4]                                         ; Selector151         ; yes                    ;
+; queue[9][4]                                          ; Selector149         ; yes                    ;
+; queue[10][4]                                         ; Selector150         ; yes                    ;
+; queue[0][4]                                          ; Selector5           ; yes                    ;
+; queue[3][4]                                          ; Selector143         ; yes                    ;
+; queue[1][4]                                          ; Selector141         ; yes                    ;
+; queue[2][4]                                          ; Selector142         ; yes                    ;
+; queue[12][4]                                         ; Selector152         ; yes                    ;
+; queue[11][5]                                         ; Selector151         ; yes                    ;
+; queue[8][5]                                          ; Selector148         ; yes                    ;
+; queue[9][5]                                          ; Selector149         ; yes                    ;
+; queue[10][5]                                         ; Selector150         ; yes                    ;
+; queue[4][5]                                          ; Selector144         ; yes                    ;
+; queue[7][5]                                          ; Selector147         ; yes                    ;
+; queue[5][5]                                          ; Selector145         ; yes                    ;
+; queue[6][5]                                          ; Selector146         ; yes                    ;
+; queue[3][5]                                          ; Selector143         ; yes                    ;
+; queue[0][5]                                          ; Selector5           ; yes                    ;
+; queue[1][5]                                          ; Selector141         ; yes                    ;
+; queue[2][5]                                          ; Selector142         ; yes                    ;
+; Number of user-specified and inferred latches = 169  ;                     ;                        ;
 +------------------------------------------------------+---------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; CurrentState~2                        ; Lost fanout                            ;
-; CurrentState~3                        ; Lost fanout                            ;
-; CurrentState~4                        ; Lost fanout                            ;
-; CurrentState.s1                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4 ;                                        ;
-+---------------------------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; CurrentState~4                        ; Lost fanout        ;
+; CurrentState~5                        ; Lost fanout        ;
+; CurrentState~6                        ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -371,12 +370,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -386,34 +385,34 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MPQ|build_i[2]            ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MPQ|Selector152           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MPQ|Selector160           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MPQ|build_i[1]            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MPQ|Selector155           ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MPQ|Selector153           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MPQ|build_i[3]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MPQ|Selector140           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |MPQ|NextState             ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux221                ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux52                 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |MPQ|Selector164           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux86                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux102                ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |MPQ|Selector5             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux30                 ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux34                 ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux14                 ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 80 LEs               ; 8 LEs                  ; No         ; |MPQ|Selector9             ;
-; 21:1               ; 8 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector75            ;
-; 21:1               ; 8 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector83            ;
-; 21:1               ; 8 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector86            ;
-; 22:1               ; 8 bits    ; 112 LEs       ; 96 LEs               ; 16 LEs                 ; No         ; |MPQ|Selector100           ;
-; 23:1               ; 8 bits    ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector40            ;
-; 23:1               ; 8 bits    ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector63            ;
-; 23:1               ; 8 bits    ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector114           ;
-; 23:1               ; 8 bits    ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector117           ;
-; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector50            ;
-; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector54            ;
-; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector103           ;
-; 32:1               ; 8 bits    ; 168 LEs       ; 152 LEs              ; 16 LEs                 ; No         ; |MPQ|Selector21            ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux209                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |MPQ|build_i[2]            ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux51                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |MPQ|Selector172           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux81                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux92                 ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |MPQ|Selector141           ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux36                 ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux15                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |MPQ|Mux28                 ;
+; 18:1               ; 8 bits    ; 96 LEs        ; 80 LEs               ; 16 LEs                 ; No         ; |MPQ|Selector7             ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 80 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector51            ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 80 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector58            ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 80 LEs               ; 24 LEs                 ; No         ; |MPQ|Selector68            ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 96 LEs               ; 16 LEs                 ; No         ; |MPQ|Selector76            ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 96 LEs               ; 16 LEs                 ; No         ; |MPQ|Selector41            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; No         ; |MPQ|Selector20            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector28            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector37            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector84            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; No         ; |MPQ|Selector90            ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 104 LEs              ; 24 LEs                 ; No         ; |MPQ|Selector98            ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 152 LEs              ; 16 LEs                 ; No         ; |MPQ|Selector108           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -423,20 +422,20 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 7                           ;
-;     ENA               ; 7                           ;
-; cycloneiii_lcell_comb ; 2319                        ;
+; cycloneiii_ff         ; 8                           ;
+;     CLR               ; 8                           ;
+; cycloneiii_lcell_comb ; 2287                        ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 23                          ;
 ;         3 data inputs ; 21                          ;
-;     normal            ; 2275                        ;
+;     normal            ; 2243                        ;
 ;         0 data inputs ; 4                           ;
-;         2 data inputs ; 62                          ;
-;         3 data inputs ; 627                         ;
-;         4 data inputs ; 1582                        ;
+;         2 data inputs ; 74                          ;
+;         3 data inputs ; 553                         ;
+;         4 data inputs ; 1612                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 8.87                        ;
+; Max LUT depth         ; 12.70                       ;
+; Average LUT depth     ; 8.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -445,7 +444,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -455,7 +454,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 23 23:09:01 2024
+    Info: Processing started: Sun May 26 18:00:27 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MPQ -c MPQ
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -464,17 +463,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file mpq.v
 Info (12127): Elaborating entity "MPQ" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at MPQ.v(41): object "max" assigned a value but never read File: D:/DIC/HW4/MPQ.v Line: 41
 Warning (10230): Verilog HDL assignment warning at MPQ.v(193): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 193
-Warning (10230): Verilog HDL assignment warning at MPQ.v(219): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 219
-Warning (10230): Verilog HDL assignment warning at MPQ.v(221): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 221
+Warning (10230): Verilog HDL assignment warning at MPQ.v(220): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 220
+Warning (10230): Verilog HDL assignment warning at MPQ.v(222): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 222
 Warning (10270): Verilog HDL Case Statement warning at MPQ.v(200): incomplete case statement has no default case item File: D:/DIC/HW4/MPQ.v Line: 200
-Warning (10230): Verilog HDL assignment warning at MPQ.v(237): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 237
-Warning (10230): Verilog HDL assignment warning at MPQ.v(240): truncated value with size 8 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 240
-Warning (10230): Verilog HDL assignment warning at MPQ.v(247): truncated value with size 8 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 247
-Warning (10230): Verilog HDL assignment warning at MPQ.v(258): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 258
-Warning (10230): Verilog HDL assignment warning at MPQ.v(276): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 276
-Warning (10230): Verilog HDL assignment warning at MPQ.v(302): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 302
-Warning (10230): Verilog HDL assignment warning at MPQ.v(311): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 311
-Info (10264): Verilog HDL Case Statement information at MPQ.v(166): all case item expressions in this case statement are onehot File: D:/DIC/HW4/MPQ.v Line: 166
+Warning (10230): Verilog HDL assignment warning at MPQ.v(238): truncated value with size 32 to match size of target (8) File: D:/DIC/HW4/MPQ.v Line: 238
+Warning (10230): Verilog HDL assignment warning at MPQ.v(241): truncated value with size 8 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 241
+Warning (10230): Verilog HDL assignment warning at MPQ.v(248): truncated value with size 8 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 248
+Warning (10230): Verilog HDL assignment warning at MPQ.v(260): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 260
+Warning (10230): Verilog HDL assignment warning at MPQ.v(279): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 279
+Warning (10230): Verilog HDL assignment warning at MPQ.v(305): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 305
+Warning (10230): Verilog HDL assignment warning at MPQ.v(314): truncated value with size 32 to match size of target (4) File: D:/DIC/HW4/MPQ.v Line: 314
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "ind", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "done", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "busy", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
@@ -493,6 +491,7 @@ Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring l
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "increase_index", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "increase_value", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "index_temp", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
+Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "build_temp", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "l", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "r", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
 Warning (10240): Verilog HDL Always Construct warning at MPQ.v(137): inferring latch(es) for variable "largest", which holds its previous value in one or more paths through the always construct File: D:/DIC/HW4/MPQ.v Line: 137
@@ -516,6 +515,10 @@ Info (10041): Inferred latch for "RAM_A[5]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v
 Info (10041): Inferred latch for "RAM_A[6]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
 Info (10041): Inferred latch for "RAM_A[7]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
 Info (10041): Inferred latch for "RAM_valid" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
+Info (10041): Inferred latch for "build_temp[0]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
+Info (10041): Inferred latch for "build_temp[1]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
+Info (10041): Inferred latch for "build_temp[2]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
+Info (10041): Inferred latch for "build_temp[3]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
 Info (10041): Inferred latch for "index_temp[0]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
 Info (10041): Inferred latch for "index_temp[1]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
 Info (10041): Inferred latch for "index_temp[2]" at MPQ.v(137) File: D:/DIC/HW4/MPQ.v Line: 137
@@ -720,9 +723,9 @@ Warning (13012): Latch ind[0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 1
 Warning (13012): Latch write_temp[0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s7 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -738,17 +741,17 @@ Warning (13012): Latch queue[6][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[3][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -764,13 +767,13 @@ Warning (13012): Latch queue[6][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[3][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[7][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[4][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -780,27 +783,27 @@ Warning (13012): Latch queue[5][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[6][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[3][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -816,13 +819,13 @@ Warning (13012): Latch queue[6][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[3][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[7][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[4][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -832,27 +835,27 @@ Warning (13012): Latch queue[5][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[6][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[3][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][4] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -868,13 +871,13 @@ Warning (13012): Latch queue[6][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[3][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][5] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[7][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[4][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -884,27 +887,27 @@ Warning (13012): Latch queue[5][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[6][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[3][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][6] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[11][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[8][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[9][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[10][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -920,13 +923,13 @@ Warning (13012): Latch queue[6][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Li
 Warning (13012): Latch queue[3][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[0][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s1 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[1][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[2][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch queue[12][7] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch write_done has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 54
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s7 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch increase_done has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 54
@@ -934,13 +937,13 @@ Warning (13012): Latch increase_done has unsafe behavior File: D:/DIC/HW4/MPQ.v 
 Warning (13012): Latch build_done has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 54
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch exe_write has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cmd_valid File: D:/DIC/HW4/MPQ.v Line: 7
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s2 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch exe_insert has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cmd_valid File: D:/DIC/HW4/MPQ.v Line: 7
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s2 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch exe_increase has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cmd_valid File: D:/DIC/HW4/MPQ.v Line: 7
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s2 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch exe_extract has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cmd_valid File: D:/DIC/HW4/MPQ.v Line: 7
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s2 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch exe_build has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s2 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch index_temp[3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
@@ -961,16 +964,24 @@ Warning (13012): Latch index_temp[7] has unsafe behavior File: D:/DIC/HW4/MPQ.v 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch increase_init[0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s5 File: D:/DIC/HW4/MPQ.v Line: 53
-Warning (13012): Latch build_i[3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch build_i[1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch build_i[2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch build_i[0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+Warning (13012): Latch build_i[3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13012): Latch max_heapify has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 34
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s4 File: D:/DIC/HW4/MPQ.v Line: 53
+Warning (13012): Latch build_temp[3] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+Warning (13012): Latch build_temp[2] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+Warning (13012): Latch build_temp[1] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
+Warning (13012): Latch build_temp[0] has unsafe behavior File: D:/DIC/HW4/MPQ.v Line: 137
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CurrentState.s3 File: D:/DIC/HW4/MPQ.v Line: 53
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "RAM_A[4]" is stuck at GND File: D:/DIC/HW4/MPQ.v Line: 137
     Warning (13410): Pin "RAM_A[5]" is stuck at GND File: D:/DIC/HW4/MPQ.v Line: 137
@@ -981,17 +992,15 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/DIC/HW4/output_files/MPQ.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data_valid" File: D:/DIC/HW4/MPQ.v Line: 5
-Info (21057): Implemented 2368 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2336 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 31 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2318 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 340 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Thu May 23 23:09:12 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 2286 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 347 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Sun May 26 18:00:37 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+

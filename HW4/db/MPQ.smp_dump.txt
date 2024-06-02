@@ -1,8 +1,8 @@
 
 State Machine - |MPQ|CurrentState
-Name CurrentState.s7 CurrentState.s6 CurrentState.s5 CurrentState.s4 CurrentState.s3 CurrentState.s2 CurrentState.s1 CurrentState.s0 
-CurrentState.s0 0 0 0 0 0 0 0 0 
-CurrentState.s1 0 0 0 0 0 0 1 1 
+Name CurrentState.s7 CurrentState.s6 CurrentState.s5 CurrentState.s4 CurrentState.s3 CurrentState.s2 CurrentState.s0 CurrentState.s1 
+CurrentState.s1 0 0 0 0 0 0 0 0 
+CurrentState.s0 0 0 0 0 0 0 1 1 
 CurrentState.s2 0 0 0 0 0 1 0 1 
 CurrentState.s3 0 0 0 0 1 0 0 1 
 CurrentState.s4 0 0 0 1 0 0 0 1 

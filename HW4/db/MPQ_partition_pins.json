@@ -72,6 +72,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "data_valid",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -120,10 +124,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "value[0]",
-					"strict" : false
-				},
-				{
 					"name" : "index[4]",
 					"strict" : false
 				},
@@ -153,6 +153,10 @@
 				},
 				{
 					"name" : "index[7]",
+					"strict" : false
+				},
+				{
+					"name" : "value[0]",
 					"strict" : false
 				},
 				{

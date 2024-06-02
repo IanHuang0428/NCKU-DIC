@@ -10,72 +10,72 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vhard_block
-Z0 !s110 1715610104
+!s110 1715610104
 !i10b 1
 !s100 1g_d>9aR6d058NDNYWX?@0
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I>n>19[:U=D1_SL`PE252O1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dD:/DIC/HW3
-Z4 w1715609995
-Z5 8D:/DIC/HW3/HW3.vo
-Z6 FD:/DIC/HW3/HW3.vo
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/DIC/HW3
+w1715609995
+8D:/DIC/HW3/HW3.vo
+FD:/DIC/HW3/HW3.vo
 !i122 175
 L0 52602 34
-Z7 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1715610104.000000
+!s108 1715610104.000000
 !s107 D:/DIC/HW3/HW3.vo|
-Z9 !s90 -reportprogress|300|-work|work|-stats=none|D:/DIC/HW3/HW3.vo|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/DIC/HW3/HW3.vo|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vMM
-R0
+Z6 !s110 1717317547
 !i10b 1
-!s100 T8`=^C9ZX?aBDkgR6QBIJ1
+!s100 nQl]:`hdB32O:kLWiNbFC0
+R0
+IH3m[T9?865=<7o@zGKiTm0
 R1
-IkJ8f[P3VGdfTJE8BEAPIP2
 R2
+w1717312052
+8D:/DIC/HW3/MM.v
+FD:/DIC/HW3/MM.v
+!i122 186
+L0 2 258
 R3
+r1
+!s85 0
+31
+Z7 !s108 1717317547.000000
+!s107 D:/DIC/HW3/MM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/DIC/HW3/MM.v|
+!i113 1
 R4
 R5
-R6
-!i122 175
-L0 32 52569
-R7
-r1
-!s85 0
-31
-R8
-Z12 !s107 D:/DIC/HW3/HW3.vo|
-R9
-!i113 1
-R10
-R11
 n@m@m
 vtestfixture1
-R0
+R6
 !i10b 1
 !s100 PWPRZFdCcQ^eNMl`FRPaT2
-R1
+R0
 I<30XoRG8<D7NU_1FQ05oF3
+R1
 R2
-R3
 w1715580012
 8D:/DIC/HW3/testfixture.v
 FD:/DIC/HW3/testfixture.v
-!i122 174
+!i122 185
 L0 7 370
-R7
+R3
 r1
 !s85 0
 31
-R8
+R7
 !s107 D:/DIC/HW3/testfixture.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/DIC/HW3/testfixture.v|
 !i113 1
-R10
-R11
+R4
+R5
